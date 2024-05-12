@@ -1,21 +1,44 @@
-import Image from "next/image";
+"use client";
 import React from "react";
-import LogoICon from "../../icons/LogoICon";
 import Logo from "@/app/components/atoms/Logo";
-import { DashboardList } from "@/app/components/molecules/DashboardList";
+import clsx from "clsx";
+import {
+  DashboardList,
+  LogoutNav,
+} from "@/app/components/molecules/DashboardList";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 function Sidenav() {
+  const pathname = usePathname();
   return (
-    <div className="h-screen flex flex-col w-[291px] bg-darkblue">
+    <div className="h-screen flex flex-col justify-around w-[291px] bg-darkblue">
       <div className="flex items-center justify-center gap-4">
         <Logo />
         <h1 className="text-[28px] font-bold">Novetive AI</h1>
       </div>
-      <div>
+      <div className="flex flex-col gap-2">
         {DashboardList.map((list) => (
-          <div key={list.label} className="flex items-center gap-16 w-2/3]">
+          <Link
+            key={list.label}
+            href={list.path}
+            className={clsx(
+              "flex items-center pl-9 gap-4 h-[61px] w-full text-xl hover:bg-gray-50 hover:bg-opacity-10 transition-all relative",
+              {
+                "bg-gray-50 bg-opacity-10 transition-all border-r-8 border-blue-600":
+                  list.path === pathname,
+              }
+            )}
+          >
             <span>{list.icon}</span>
             {list.label}
+          </Link>
+        ))}
+      </div>
+      <div>
+        {LogoutNav.map((nav) => (
+          <div className="flex items-center pl-9 gap-4 h-[61px] w-full text-xl hover:bg-gray-50 hover:bg-opacity-10 transition-all after:">
+            {nav.icon} {nav.label}
           </div>
         ))}
       </div>
