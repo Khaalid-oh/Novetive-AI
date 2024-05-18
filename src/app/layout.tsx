@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Novetive AI 3.5",
-  description: "Created by Novetive",
+  title: "Novetiv AI 3.5",
+  description: "Created by Novetiv",
 };
 
 export default function RootLayout({
