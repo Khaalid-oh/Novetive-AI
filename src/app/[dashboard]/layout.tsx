@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Sidenav />
       </div>
       <div className="w-full">
-        <Topnav />
+        {/* <Topnav /> */}
         {children}
       </div>
     </div>
