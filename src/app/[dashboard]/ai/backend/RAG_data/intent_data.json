@@ -1,0 +1,57 @@
+{"intents": [
+
+    {
+        "tag": "general_intent",
+        "patterns": [
+        "Hi",
+        "Bye",
+        "Hello",
+        "how are you today",
+        "I have some requests",
+        "Thanks for your help",
+        "Thanks",
+        "Thank you",
+        "That was all",
+        "I will",
+        "Until next time",
+        "Ok",
+        "sure",
+        "goodbye",
+        "how do I generate contents from you",
+        "I was thinking to ask a question"
+        ],
+        "responses": ["none"]
+    },
+    {
+        "tag": "not_allowed",
+        "patterns": [
+        "sex",
+        "girl",
+        "sexy",
+        "fuck",
+        "porn",
+        "ass",
+        "bitch",
+        "cock",
+        "dick",
+        "pussy",
+        "shit",
+        "slut",
+        "whore",
+        "asshole",
+        "cum",
+        "damn",
+        "bastard",
+        "cunt",
+        "nude",
+        "screw",
+        "wank",
+        "blowjob",
+        "Fuck you",
+        "idiot",
+        "useless"
+        ],
+        "responses": ["Let's keep the conversation respectful, please."]
+    }
+]
+}
