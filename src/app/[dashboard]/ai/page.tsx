@@ -19,7 +19,7 @@ function Ai() {
         )
     }, [])
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center bg-light">
+    <div className="w-full h-full flex flex-col items-center justify-center bg-light">
       <div className="flex flex-col items-center justify-center h-[180px] w-[340px] gap-5">
         <div className="border border-yellow-600 w-[102px] h-[102px] rounded-full flex items-center justify-center">
           <div className="bg-custom-gradient flex items-center justify-center w-[90px] h-[90px] rounded-full">
@@ -39,13 +39,12 @@ function Ai() {
             </div>
           ))}
         </div>
-        <div className="bg-white rounded-full flex items-center justify-between h-16 px-4">
+        <div className="flex">
           <input
-            className="h-full w-[90%] rounded-full"
+            className="w-full py-4 pl-4 pr-12 text-gray-600 bg-white rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="Ask me anything..."
           />
-          <div>{message}</div>
-          <div className="flex justify-center items-center bg-custom-gradient w-16 h-12 rounded-3xl">
+          <div className="flex justify-center items-center bg-custom-gradient w-16 h-12 rounded-3xl -translate-x-[70px] translate-y-1">
             <SendIcon />
           </div>
         </div>

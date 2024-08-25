@@ -12,8 +12,8 @@ import Link from "next/link";
 function Sidenav() {
   const pathname = usePathname();
   return (
-    <div className="h-screen flex flex-col pt-6 w-[260px] bg-custom-blue justify-between">
-      <div className="flex items-center px-4 gap-2">
+    <div className="w-[291px] h-full flex-col pt-12 bg-darkblue">
+      <div className="flex items-center justify-center gap-4">
         <Logo />
         <h1 className="text-[20px] font-bold">Novetiv AI</h1>
       </div>
