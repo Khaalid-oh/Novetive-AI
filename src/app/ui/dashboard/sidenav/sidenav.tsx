@@ -15,15 +15,18 @@ function Sidenav() {
     <div className="w-[291px] h-full flex-col pt-12 bg-darkblue">
       <div className="flex items-center justify-center gap-4">
         <Logo />
-        <h1 className="text-[28px] font-bold">Novetiv AI</h1>
+        <h1 className="text-[20px] font-bold">Novetiv AI</h1>
       </div>
-      <div className="flex flex-col gap-2 pt-24">
+
+
+      {/* Middle line */}
+      <div className="flex flex-col gap-2 ">
         {DashboardList.map((list) => (
           <Link
             key={list.label}
             href={list.path}
             className={clsx(
-              "flex items-center pl-9 gap-4 h-[61px] w-full text-xl hover:bg-gray-50 hover:bg-opacity-10 transition-all relative",
+              "flex items-center pl-9 py-2 gap-4 w-full text-md hover:bg-gray-50 hover:bg-opacity-10 transition-all relative",
               {
                 "bg-gray-50 bg-opacity-10 transition-all border-r-8 border-blue-600":
                   list.path === pathname,
@@ -36,11 +39,19 @@ function Sidenav() {
         ))}
       </div>
       <div>
+
+
+
+        {/* Buttom line */}
+        <div>
         {LogoutNav.map((nav) => (
-          <div className="flex items-center pl-9 pt-60 gap-4 h-[61px] w-full text-xl hover:bg-gray-50 hover:bg-opacity-10 transition-all after:">
+          <div className="flex items-center pl-9  gap-4 h-[61px] w-full text-md hover:bg-gray-50 hover:bg-opacity-10 transition-all after:">
             {nav.icon} {nav.label}
           </div>
         ))}
+        </div>
+
+
       </div>
     </div>
   );

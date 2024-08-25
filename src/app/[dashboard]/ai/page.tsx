@@ -1,9 +1,23 @@
+"use client"
 import { groupList } from "@/app/components/molecules/AiGroupList";
 import AIcon from "@/app/ui/icons/AI-Icon";
 import SendIcon from "@/app/ui/icons/SendIcon";
-import React from "react";
+import React, { useEffect, useState } from 'react';
 
 function Ai() {
+
+    const [message, setMessage] = useState("Loading");
+
+    useEffect(() => {
+
+        fetch("http://localhost:8080/api/get").then(
+            response => response.json()
+        ).then(
+            data => {
+                setMessage(data.message);
+            }
+        )
+    }, [])
   return (
     <div className="w-full h-full flex flex-col items-center justify-center bg-light">
       <div className="flex flex-col items-center justify-center h-[180px] w-[340px] gap-5">
